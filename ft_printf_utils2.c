@@ -51,7 +51,7 @@ int	ft_putptr(void *ptr)
 	unsigned long	n;
 
 	if (ptr == 0)
-		return (ft_putstr("(nil)"));
+		return (ft_putstr("0x0"));
 	n = (unsigned long) ptr;
 	cnt = 0;
 	write(1, "0x", 2);
