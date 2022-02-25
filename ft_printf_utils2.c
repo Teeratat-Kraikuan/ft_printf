@@ -47,7 +47,7 @@ int	ft_puthex_ptr(unsigned long n)
 
 int	ft_putptr(void *ptr)
 {
-	int	cnt;
+	int				cnt;
 	unsigned long	n;
 
 	if (ptr == 0)

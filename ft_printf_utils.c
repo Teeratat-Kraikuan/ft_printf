@@ -23,7 +23,7 @@ int	ft_putstr(char *s)
 	int	cnt;
 
 	if (s == NULL)
-		return(ft_putstr("(null)"));
+		return (ft_putstr("(null)"));
 	cnt = 0;
 	while (s[cnt])
 		cnt++;
