@@ -11,20 +11,20 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRCS = ft_printf_utils.c \
-		ft_printf_utils2.c \
-		ft_printf.c
+SRCS = srcs/ft_printf_utils.c \
+		srcs/ft_printf_utils2.c \
+		srcs/ft_printf.c
 OBJS = $(SRCS:.c=.o)
 LIB = ar -rcs
 FLAGS = -Wall -Werror -Wextra
 
 all : $(NAME)
 
-%.o : %.c
-		gcc $(FLAGS) -c $< -o $@
-
 $(NAME) : $(OBJS)
 		$(LIB) $(NAME) $(OBJS)
+
+$(OBJS): %.o: %.c
+		gcc $(FLAGS) -c $< -o $@ -I includes/
 
 clean :
 		rm -f $(OBJS)
